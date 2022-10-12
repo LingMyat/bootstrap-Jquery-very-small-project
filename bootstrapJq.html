@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: sans-serif;
+      box-sizing: border-box;
+    }
+
+    .d-flex-content {
+      flex-wrap: wrap;
+    }
+
+    .hamburgerMenu {
+      cursor: pointer;
+      width: 35px;
+    }
+
+    .hamburgerMenu div {
+      width: 100%;
+      height: 3.4px;
+      border-radius: 3px;
+      margin-bottom: 3.5px;
+      transition: all 0.6s ease;
+    }
+
+    .hide {
+      opacity: 0;
+    }
+
+    .plusDeg {
+      transform: rotate(45deg) translate(2px, 7px);
+    }
+
+    .minusDeg {
+      transform: rotate(-45deg) translate(2px, -7px);
+    }
+
+    .carousel-item {
+      height: 100vh;
+      min-height: 300px;
+      background: no-repeat scroll center scroll;
+      background-size: cover;
+    }
+
+    .item1 {
+      background: url("https://shop.static.ingka.ikea.com/category-images/Category_decorative-accessories.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .item2 {
+      background: url("https://www.ikea.com/images/table-et-mur-decores-9b3fd6792a1399afa00abe6772c96bed.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .item3 {
+      background: url("https://www.decorilla.com/online-decorating/wp-content/uploads/2020/09/Monochromatic-Forrest-bedroom-wallpaper-idea-by-Mladen-C.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .carousel-item::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: #000;
+      opacity: 0.5;
+    }
+
+    .carousel-caption {
+      bottom: 39%;
+    }
+
+    .carousel-indicators {
+      bottom: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class=" px-xl-5 px-lg-3 navbar navbar-expand-lg bg-light sticky-top shadow">
+    <div class="container-fluid ">
+      <a class="navbar-brand text-secondary" href="#">Nx-<span class=" text-danger">RoomDecoration</span></a>
+      <!-- <button > -->
+      <div class="hamburgerMenu navbar-toggler p-0 border-0" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <div class="line1 bg-black"></div>
+        <div class="line2 bg-black"></div>
+        <div class="line3 bg-black"></div>
+      </div>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+      <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown-center">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu p-0 bg-light">
+              <li><a class="dropdown-item" href="#">Themes</a></li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-danger" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item item1 active">
+       
+        <div class="carousel-caption">
+          <h1>Unique Experience</h1>
+          <p class="text-uppercase">enjoin with us</p>
+        </div>
+      </div>
+      <div class="carousel-item item2">
+      
+        <div class="carousel-caption">
+          <h1>Relaxing Design</h1>
+          <p class="text-uppercase">Your room, your style</p>
+        </div>
+      </div>
+      <div class="carousel-item item3">
+        
+        <div class="carousel-caption">
+          <h2>Welcome to Nx-RoomDecoration</h2>
+          <p>GET OUR BEST SERVICE NOW!</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <h1 class="text-center mt-3">Our Popular Themes</h1>
+
+
+  <div class=" d-flex d-flex-content justify-content-evenly">
+    <div class="card hv my-3 p-0 " style="width: 18rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTttzFr8GDJVHepqla5r8y5fwTzVqz_-6hhwA&usqp=CAU"
+        class="card-img-top" alt="...">
+      <div class="card-body bg-warning">
+        <h5 class="card-title">Yellow theme</h5>
+        <p class="card-text">Yellow is represent for Beauty.<br>Choose to get very beautiful room design.</p>
+        <a href="#" class="btn btn-dark text-warning">Go Yellow themes</a>
+      </div>
+    </div>
+    <div class="card hv my-3 p-0 " style="width: 18rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjlNH31GCGtc4Xq8-1na9FZBAAXjgQ2seEqg&usqp=CAU"
+        class="card-img-top" alt="...">
+      <div class="card-body bg-light">
+        <h5 class="card-title text-success">Green theme</h5>
+        <p class="card-text text-success">Green is represent for Success.<br>This design will take you to more
+          successful mindset.</p>
+        <a href="#" class="btn btn-success">Go Green themes</a>
+      </div>
+    </div>
+    <div class="card hv my-3 p-0 " style="width: 18rem;">
+      <img
+        src="https://cdn.shopify.com/s/files/1/2656/8500/products/90991_Cloudy_Sky_Blue_roomshot_large.jpg?v=1567524309"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-primary">Blue theme</h5>
+        <p class="card-text text-primary">Blue is represent for Peace.<br>Just chill and relax with your family.Get
+          relax now.</p>
+        <a href="#" class="btn btn-primary">Go Blue themes</a>
+      </div>
+    </div>
+    <div class="card hv my-3 p-0 " style="width: 18rem;">
+      <img src="https://cdn.shopify.com/s/files/1/2271/0427/products/WM-073_PLANK_0_280x.jpg?v=1571709683"
+        class="card-img-top" alt="...">
+      <div class="card-body bg-dark">
+        <h5 class="card-title text-secondary">Grey theme</h5>
+        <p class="card-text text-secondary">Grey is represent for Smart.<br>If you wish to get smart room? Then choose
+          this theme now.</p>
+        <a href="#" class="btn btn-secondary text-dark">Go Grey themes</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".hv").css({ "transition": "0.3s" })
+    let cardHoverFun = (event) => {
+      $(event).mouseenter(function () {
+        $(event).addClass('shadow')
+      })
+      $(event).mouseleave(function () {
+        $(event).removeClass('shadow')
+      })
+    }
+    for (let index = 0; index < $(".hv").length; index++) {
+      cardHoverFun($(".hv")[index])
+    }
+    $(".hamburgerMenu").click(function () {
+      $(".line1").toggleClass("plusDeg")
+      $(".line2").toggleClass("hide")
+      $(".line3").toggleClass("minusDeg")
+    })
+  })
+  $(".dropdown-item").css({ "transition": "0.4s" })
+  let dropDownHover = (event) => {
+    $(event).mouseenter(function () {
+      $(event).addClass("bg-danger text-white")
+    })
+    $(event).mouseleave(function () {
+      $(event).removeClass("bg-danger text-white")
+    })
+  }
+  for (let i = 0; i < $(".dropdown-item").length; i++) {
+    dropDownHover($(".dropdown-item")[i])
+  }
+</script>
+
+</html>
+
+
+
+<!-- use bootstrap-grid is not powerful as you think -->
+<!-- <div class="container">
+                  <div class="row row-cols-lg-4">
+                    <div class="card hv p-0 col " style="width: 18rem;">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTttzFr8GDJVHepqla5r8y5fwTzVqz_-6hhwA&usqp=CAU" class="card-img-top" alt="...">
+                      <div class="card-body bg-warning">
+                        <h5 class="card-title">Yellow theme</h5>
+                        <p class="card-text">Yellow is represent for Beauty.<br>Choose to get very beautiful room design.</p>
+                        <a href="#" class="btn btn-dark text-warning">Go Yellow themes</a>
+                      </div>
+                    </div>
+                    <div class="card hv p-0 col " style="width: 18rem;">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjlNH31GCGtc4Xq8-1na9FZBAAXjgQ2seEqg&usqp=CAU" class="card-img-top" alt="...">
+                      <div class="card-body bg-light">
+                        <h5 class="card-title text-success">Green theme</h5>
+                        <p class="card-text text-success">Green is represent for Success.<br>This design will take you to more successful mindset.</p>
+                        <a href="#" class="btn btn-success">Go Green themes</a>
+                      </div>
+                    </div>
+                    <div class="card hv p-0 col " style="width: 18rem;">
+                      <img src="https://cdn.shopify.com/s/files/1/2656/8500/products/90991_Cloudy_Sky_Blue_roomshot_large.jpg?v=1567524309" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">Blue theme</h5>
+                        <p class="card-text text-primary">Blue is represent for Peace.<br>Just chill and relax with your family.Get relax now.</p>
+                        <a href="#" class="btn btn-primary">Go Blue themes</a>
+                      </div>
+                    </div>
+                    <div class="card hv p-0 col " style="width: 18rem;">
+                      <img src="https://cdn.shopify.com/s/files/1/2271/0427/products/WM-073_PLANK_0_280x.jpg?v=1571709683" class="card-img-top" alt="...">
+                      <div class="card-body bg-dark">
+                        <h5 class="card-title text-secondary">Grey theme</h5>
+                        <p class="card-text text-secondary">Grey is represent for Smart.<br>If you wish to get smart room? Then choose this theme now.</p>
+                        <a href="#" class="btn btn-secondary text-dark">Go Grey themes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
